@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Button from '@catho/quantum/Button';
+
 
 const ScrollUpButton = () => {
   const [scrollUpButton, setScrollUpButton] = useState(false);
@@ -24,7 +24,7 @@ const ScrollUpButton = () => {
   return (
     <div className="ScrollUpButton">
       {scrollUpButton && (
-        <Button size="small" icon="keyboard_arrow_up" onClick={scrollTop} />
+        <button onClick={scrollTop}>Top</button>
       )}
     </div>
   );
