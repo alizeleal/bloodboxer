@@ -6,7 +6,7 @@ import ScrollUpButton from "./components/scrollupbutton/ScrollUpButton";
 export default function Home() {
   return (
     <div className=" items-center  min-h-screen font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+      <main>
         <div className="Boxe" id="boxe">
           <Image
             src="/blood_boxer_no_bg.png"
@@ -33,7 +33,13 @@ export default function Home() {
         </div>
 
         <div className="MuayThai" id="muaythai">
-          <p className="Text">
+          <Image
+            src="/equipe_esparta_no_bg.png"
+            width={450}
+            height={450}
+            alt="Equipe Esparta"
+          />
+                    <p className="Text">
             &quot;Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -49,12 +55,6 @@ export default function Home() {
             consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
             pariatur?&quot;
           </p>
-          <Image
-            src="/equipe_esparta_no_bg.png"
-            width={450}
-            height={450}
-            alt="Equipe Esparta"
-          />
         </div>
         <div className="JiuJitsu" id="jiujitsu">
           <Image
