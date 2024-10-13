@@ -3,15 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --background: #173B45;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #173b45;
+  --foreground: #e4e0e1;
+  --odd-article: #cd1818;
+  --even-article: #f8eded;
 }
 
 body {
@@ -27,28 +22,45 @@ body {
 }
 
 .Header {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem;
+  background-image: url("../public/bb_top_banner.png");
+  background-repeat: no-repeat;
 }
 
+.HeaderContainer {
+  height: 70vh;
+  background-position: right center;
+}
+
+@media (max-width: 1023px) {
+  .NavigationBar {
+    display: none;
+  }
+
+  .Header {
+    display: none;
+  }
+
+  .HeaderContainer {
+    display: none;
+  }
+}
 
 .NavigationBar {
-
-  display: flex;
-  justify-content: end;
-  gap: 20px;
   padding: 5rem;
   margin-right: 10%;
   font-size: 2rem;
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: var(--even-article);
+  li {
+    margin: 30px 0;
+  }
 }
-
 
 .Boxe {
   display: flex;
   justify-content: space-around;
-  background-color: #CD1818;
+  background-color: var(--odd-article);
   gap: 20px;
   align-items: center;
   width: 100%;
@@ -56,10 +68,9 @@ body {
   font-size: 1.5rem;
 }
 
-.MuayThai
-{
+.MuayThai {
   display: flex;
-  background-color: #F8EDED;
+  background-color: var(--even-article);
   justify-content: space-around;
   align-items: center;
   width: 100%;
@@ -67,13 +78,12 @@ body {
   gap: 20px;
   font-size: 1.5rem;
   color: #171717;
-
 }
 
 .JiuJitsu {
   align-items: center;
   display: flex;
-  background-color: #CD1818;
+  background-color: var(--odd-article);
   justify-content: space-around;
   gap: 20px;
   width: 100%;
@@ -81,10 +91,9 @@ body {
   font-size: 1.5rem;
 }
 
-.Contato
-{
+.Contato {
   display: flex;
-  background-color: #F8EDED;
+  background-color: var(--even-article);
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -93,15 +102,21 @@ body {
   gap: 20px;
   font-size: 1.5rem;
   color: #171717;
-
 }
-
 
 .ScrollUpButton {
   position: fixed;
   bottom: 50px;
   right: 50px;
-  z-Index: 97;
+  z-index: 97;
+  button {
+    text-align: center;
+    width: 60px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #173b45;
+    border-color: #cccccc;
+  }
 }
 
 .Text {
@@ -110,8 +125,34 @@ body {
 
 .Footer-text {
   text-align: center;
-  color: #CCCCCC;
+  color: #cccccc;
   line-height: 22px;
   font-family: Arial, Helvetica, sans-serif;
   padding: 2%;
+}
+
+@media (max-width: 1023px) {
+  .NavigationBar {
+    display: none;
+  }
+  .Boxe {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .MuayThai {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .JiuJitsu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
 }

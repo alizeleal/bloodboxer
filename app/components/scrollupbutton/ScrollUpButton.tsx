@@ -24,7 +24,7 @@ const ScrollUpButton = () => {
   return (
     <div className="ScrollUpButton">
       {scrollUpButton && (
-        <button onClick={scrollTop}>Top</button>
+        <button onClick={scrollTop}>Topo</button>
       )}
     </div>
   );
